@@ -91,7 +91,7 @@ export default function Navbar() {
           <Button
             variant="secondary"
             className="!py-1.5 !px-3.5 !text-xs font-mono"
-            href="/resume.pdf"" // Placeholder pointing to printable version or resume resource
+            href="/resume.pdf" // Placeholder pointing to printable version or resume resource
             icon={FileText}
           >
             RESUME

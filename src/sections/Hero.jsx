@@ -132,7 +132,7 @@ export default function Hero() {
             </Button>
             <Button
               variant="secondary"
-              href="https://github.com/mushabmahin/portfolio/raw/main/resume.pdf"
+              href="/resume.pdf"
               icon={FileText}
               className="px-5 py-3 text-zinc-300 hover:text-white"
             >
