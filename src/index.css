@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+  
+  --color-darkBg: #09090b;
+  --color-cardBg: #121214;
+  --color-accentIndigo: #6366f1;
+  --color-accentCyan: #06b6d4;
+  --color-accentEmerald: #10b981;
+  
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #09090b;
+  color: #d4d4d8;
+}
+
+/* Reusable modern visual components as Tailwind v4 utilities */
+@utility glass-panel {
+  background-color: rgba(18, 18, 20, 0.5); /* cardBg-like opacity */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(39, 39, 42, 0.6); /* zinc-800/60 */
+}
+
+@utility glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    background-color: rgba(18, 18, 20, 0.85);
+    border-color: rgba(63, 63, 70, 0.6);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(99, 102, 241, 0.05);
+  }
+}
+
+@utility text-gradient-primary {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #f4f4f5, #e0e7ff, #cffafe);
+}
+
+@utility text-gradient-indigo {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #818cf8, #8b5cf6);
+}
+
+@utility text-gradient-cyan {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #22d3ee, #14b8a6);
+}
+
+@utility glow-spot {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+/* Custom slim modern scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
