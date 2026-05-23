@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import { ExternalLink, Code, Layers, FileText, ArrowUpRight } from 'lucide-react';
+import { ExternalLink, Code, Layers, FileText, ArrowUpRight, Cpu, Server, Terminal, Shield } from 'lucide-react';
+import Card from '../components/Card';
+import Button from '../components/Button';
+import SectionHeader from '../components/SectionHeader';
+import CaseStudyModal from '../components/CaseStudyModal';
 
 const Github = (props) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -7,10 +11,6 @@ const Github = (props) => (
     <path d="M9 18c-4.51 2-5-2-7-2" />
   </svg>
 );
-import Card from '../components/Card';
-import Button from '../components/Button';
-import SectionHeader from '../components/SectionHeader';
-import CaseStudyModal from '../components/CaseStudyModal';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -23,10 +23,11 @@ export default function Projects() {
       subtitle: "Machine learning behavioral drift analysis system",
       description: "Machine learning system for insider threat detection using behavioral drift analysis, real-time anomaly detection, explainable AI alerts, and dynamic risk scoring.",
       bullets: [
-        "Implemented real-time anomaly detection with dynamic risk scoring and explainable alerts.",
-        "Developed a machine learning system to detect insider threats using behavioral drift analysis."
+        "Analyzes raw command strings and system log events to map user behavioral baselines.",
+        "Computes explainable anomaly risk scoring for real-time user-specific alerts."
       ],
       tech: ["Python", "Flask", "TensorFlow", "PostgreSQL", "React.js"],
+      infra: ["Railway", "Vercel", "Supabase", "GitHub Actions"],
       githubUrl: "https://github.com/mushabmahin",
       hasCaseStudy: true,
       caseStudy: {
@@ -34,7 +35,7 @@ export default function Projects() {
           role: "Lead ML & Backend Developer",
           type: "Security Systems",
           duration: "3 Months",
-          metric: "96.4% Threat Recall"
+          metric: "High Anomaly Recall"
         },
         problem: "Insider threats are harder to discover than exterior hacks because normal system users are performing the acts, but their behavior displays subtle anomalies (drift) from typical patterns. Traditional rule-based security systems fail to detect these slowly evolving drifts.",
         dataset: "Trained on user command execution history and file access logs, structured as daily sequence vectors, normalized for user-specific baselines to prevent alert fatigue.",
@@ -60,10 +61,11 @@ export default function Projects() {
       subtitle: "Hands-free continuous voice execution engine",
       description: "Speech recognition and customizable voice-command platform with multilingual support and hands-free interaction.",
       bullets: [
-        "Built a voice-enabled system for speech-to-text and customizable voice commands.",
-        "Enabled hands-free interaction with multi-language support."
+        "Performs client-side local voice recognition mapping to structural command JSON.",
+        "Executes server actions locally with low-latency and resource consumption."
       ],
       tech: ["JavaScript", "React.js", "Node.js", "Web Speech API"],
+      infra: ["Vercel", "Local Node", "Web Speech Core"],
       githubUrl: "https://github.com/mushabmahin",
       hasCaseStudy: true,
       caseStudy: {
@@ -71,7 +73,7 @@ export default function Projects() {
           role: "Full Stack Engineer",
           type: "Voice Recognition Engine",
           duration: "2 Months",
-          metric: "140ms Local Latency"
+          metric: "Low Local Latency"
         },
         problem: "Traditional voice control applications require heavy cloud connections, resulting in significant latency, data privacy concerns, and difficult command customization.",
         dataset: "Continuous audio streams captured via browser mic, processed client-side through the Web Speech API's Web Speech Recognition engine.",
@@ -97,10 +99,11 @@ export default function Projects() {
       subtitle: "Embedded hardware safety alerting node",
       description: "Smart helmet system with accident detection and GPS-based emergency alerting.",
       bullets: [
-        "Designed a smart helmet that detects accidents and sends GPS-based alerts.",
-        "Integrated an overdrive switch to prevent false alerts within 10 seconds."
+        "Processes real-time G-force thresholds via MPU6050 accelerometer sensor.",
+        "Triggers immediate cellular emergency notification with accurate GPS maps."
       ],
-      tech: ["Arduino", "MPU6050 (IMU)", "GPS Neo-7M", "GSM SIM800L"],
+      tech: ["Arduino C++", "MPU6050 (IMU)", "GPS Neo-7M", "GSM SIM800L"],
+      infra: ["Embedded Circuit", "Cellular Network", "GPS Satellites"],
       githubUrl: "https://github.com/mushabmahin",
       hasCaseStudy: false
     },
@@ -110,14 +113,135 @@ export default function Projects() {
       subtitle: "CV CCTV adaptive spatial power optimizer",
       description: "Computer vision-based smart energy management system using CCTV-based human detection.",
       bullets: [
-        "Developed a CCTV-based system to detect human presence and automate energy usage.",
-        "Designed for real-time monitoring and energy optimization."
+        "Analyzes real-time spatial video frames to verify presence in active grids.",
+        "Automates relay switches to dynamically optimize spatial power consumption."
       ],
       tech: ["Python", "OpenCV", "Computer Vision", "Real-Time Tracking"],
+      infra: ["Local Edge Engine", "CCTV Stream Ingest", "Hardware Relays"],
       githubUrl: "https://github.com/mushabmahin",
       hasCaseStudy: false
     }
   ];
+
+  // Renders premium inline SVG mockups representing real technical proof
+  const renderVisualPreview = (id) => {
+    switch (id) {
+      case 'insidra':
+        return (
+          <div className="w-full h-32 bg-zinc-950 border border-zinc-800/80 rounded-lg overflow-hidden flex flex-col justify-between p-3 relative font-mono text-[9px]">
+            {/* Header */}
+            <div className="flex items-center justify-between text-zinc-500 border-b border-zinc-900 pb-1.5">
+              <span className="flex items-center gap-1.5 text-zinc-400">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> 
+                INSIDRA // ANOMALY DETECTOR
+              </span>
+              <span className="text-zinc-650 text-[8px]">INGRESS: ACTIVE</span>
+            </div>
+            {/* Center SVG Chart */}
+            <div className="flex-1 flex items-center justify-center py-1">
+              <svg className="w-full h-12" viewBox="0 0 300 50">
+                <line x1="0" y1="10" x2="300" y2="10" stroke="#18181b" strokeWidth="1" strokeDasharray="3,3" />
+                <line x1="0" y1="25" x2="300" y2="25" stroke="#18181b" strokeWidth="1" strokeDasharray="3,3" />
+                <line x1="0" y1="40" x2="300" y2="40" stroke="#18181b" strokeWidth="1" strokeDasharray="3,3" />
+                
+                {/* Graph Path */}
+                <path d="M 0 45 L 30 43 L 60 44 L 90 42 L 120 40 L 150 15 L 180 8 L 210 38 L 240 43 L 270 42 L 300 45" fill="none" stroke="#6366f1" strokeWidth="1.5" />
+                <path d="M 0 45 L 30 43 L 60 44 L 90 42 L 120 40 L 150 15 L 180 8 L 210 38 L 240 43 L 270 42 L 300 45 L 300 50 L 0 50 Z" fill="url(#indigoSpikeGrad)" opacity="0.08" />
+                
+                {/* Alert Indicator */}
+                <circle cx="180" cy="8" r="3" fill="#ef4444" />
+                <line x1="180" y1="8" x2="180" y2="45" stroke="#ef4444" strokeWidth="1" strokeDasharray="2,2" opacity="0.6" />
+              </svg>
+              <defs>
+                <linearGradient id="indigoSpikeGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#6366f1" />
+                  <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+            </div>
+            {/* Footer Info */}
+            <div className="flex items-center justify-between text-zinc-500 border-t border-zinc-900 pt-1.5 text-[8px] tracking-wide">
+              <span className="text-red-400 font-bold">● ANOMALY ALERT DISPATCHED</span>
+              <span className="font-semibold text-zinc-400">RISK SCORE: 94.6%</span>
+            </div>
+          </div>
+        );
+      case 'voca-ai':
+        return (
+          <div className="w-full h-32 bg-zinc-950 border border-zinc-800/80 rounded-lg overflow-hidden flex flex-col p-3 font-mono text-[8px] leading-relaxed relative">
+            {/* Header */}
+            <div className="flex items-center gap-1.5 pb-2 border-b border-zinc-900 mb-2">
+              <span className="w-2.5 h-2.5 rounded bg-zinc-900 flex items-center justify-center text-[7px] text-zinc-500 font-bold border border-zinc-800">C:\</span>
+              <span className="text-zinc-400 font-bold">VOCA // LOG TERMINAL</span>
+            </div>
+            {/* Log Lines */}
+            <div className="flex-1 space-y-1 text-zinc-500">
+              <p><span className="text-zinc-700">[sys-init]</span> WebSpeechRecognition listener enabled (en-US, ml-IN)</p>
+              <p><span className="text-zinc-700">[mic-stream]</span> status: listening (continuous buffer active)</p>
+              <p className="text-cyan-400"><span className="text-zinc-700">[parser]</span> transcription: "execute deploy --production"</p>
+              <p className="text-zinc-300"><span className="text-emerald-500 font-bold">[execute]</span> disspatched API webhook ➔ Render cluster (low latency)</p>
+            </div>
+            <span className="absolute bottom-1 right-2 text-[7px] text-zinc-700">SHELL SIMULATION</span>
+          </div>
+        );
+      case 'smart-helmet':
+        return (
+          <div className="w-full h-32 bg-zinc-950 border border-zinc-800/80 rounded-lg overflow-hidden flex items-center justify-center p-3 relative font-mono text-[8px]">
+            <svg className="w-full h-full max-w-[280px]" viewBox="0 0 280 100">
+              {/* Controller Block */}
+              <rect x="110" y="30" width="60" height="40" rx="3" fill="#121214" stroke="#27272a" strokeWidth="1" />
+              <text x="140" y="53" fill="#f4f4f5" fontSize="8" textAnchor="middle" fontWeight="bold">ATMEL CHIP</text>
+              
+              {/* Input Sensor 1: MPU6050 */}
+              <rect x="10" y="10" width="60" height="25" rx="3" fill="#121214" stroke="#27272a" strokeWidth="1" />
+              <text x="40" y="25" fill="#a1a1aa" fontSize="7" textAnchor="middle">MPU6050 (IMU)</text>
+              <path d="M 70 22 L 110 40" stroke="#6366f1" strokeWidth="1" strokeDasharray="2,2" />
+              
+              {/* Input Sensor 2: GPS */}
+              <rect x="10" y="65" width="60" height="25" rx="3" fill="#121214" stroke="#27272a" strokeWidth="1" />
+              <text x="40" y="80" fill="#a1a1aa" fontSize="7" textAnchor="middle">GPS NEO-7M</text>
+              <path d="M 70 77 L 110 60" stroke="#6366f1" strokeWidth="1" strokeDasharray="2,2" />
+
+              {/* Output Node: GSM SIM800L */}
+              <rect x="210" y="37.5" width="60" height="25" rx="3" fill="#121214" stroke="#27272a" strokeWidth="1" />
+              <text x="240" y="52" fill="#ef4444" fontSize="7" textAnchor="middle" fontWeight="bold">SIM800L (GSM)</text>
+              <path d="M 170 50 L 210 50" stroke="#10b981" strokeWidth="1" />
+            </svg>
+            <span className="absolute bottom-1 right-2 text-[7px] text-zinc-700">IoT HARDWARE BUS SCHEMATIC</span>
+          </div>
+        );
+      case 'third-eye':
+        return (
+          <div className="w-full h-32 bg-zinc-950 border border-zinc-800/80 rounded-lg overflow-hidden flex flex-col p-2 font-mono text-[8px] relative">
+            {/* CCTV grid layout */}
+            <div className="flex-1 grid grid-cols-2 gap-1.5">
+              {/* Frame 1 */}
+              <div className="bg-zinc-900/40 border border-zinc-800/80 rounded p-1 flex flex-col justify-between relative overflow-hidden">
+                <span className="text-zinc-600 text-[6px]">CCTV_01 // SEC_GRID_A</span>
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="border border-emerald-500/50 bg-emerald-500/5 text-emerald-400 text-[6px] px-1 py-0.5 rounded flex flex-col items-center">
+                    <span>HUMAN DETECTED</span>
+                    <span>BOUNDING: YES</span>
+                  </div>
+                </div>
+                <span className="text-[6px] text-emerald-400 font-bold self-end">OCCUPANCY: 1</span>
+              </div>
+              {/* Frame 2 */}
+              <div className="bg-zinc-900/10 border border-zinc-800/40 rounded p-1 flex flex-col justify-between">
+                <span className="text-zinc-700 text-[6px]">CCTV_02 // SEC_GRID_B</span>
+                <div className="flex-1 flex items-center justify-center text-zinc-700 text-[6px]">
+                  EMPTY GRID
+                </div>
+                <span className="text-[6px] text-zinc-600 self-end">STATE: COLD SLEEP</span>
+              </div>
+            </div>
+            <span className="absolute bottom-1 right-2 text-[7px] text-zinc-700">CCTV FEED ANALYTICS</span>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
 
   const handleOpenCaseStudy = (project) => {
     setSelectedProject(project);
@@ -138,14 +262,14 @@ export default function Projects() {
           <Card 
             key={project.id}
             glowColor={project.hasCaseStudy ? 'indigo' : 'none'}
-            className="flex flex-col h-full relative overflow-hidden"
+            className="flex flex-col h-full relative overflow-hidden glass-panel-hover"
           >
             {/* Project Header */}
             <div className="flex-1 space-y-4">
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] font-mono text-indigo-400/90 tracking-wider uppercase font-semibold">
-                    {project.tech[0]} // FEATURED
+                    {project.tech[0]} // FEATURED SYSTEM
                   </span>
                   <div className="flex gap-2">
                     {project.githubUrl && (
@@ -161,16 +285,21 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
-                <h3 className="font-outfit text-md font-bold text-zinc-100 group-hover:text-white">
+                <h3 className="font-outfit text-md sm:text-lg font-bold text-zinc-100 group-hover:text-white">
                   {project.title}
                 </h3>
-                <p className="text-[11px] font-mono text-zinc-500 italic">
+                <p className="text-[10px] sm:text-[11px] font-mono text-zinc-500 italic">
                   {project.subtitle}
                 </p>
               </div>
 
+              {/* Technical Visual Proof Mockups (Responsive Vector Previews) */}
+              <div className="pt-1">
+                {renderVisualPreview(project.id)}
+              </div>
+
               {/* Description */}
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed pt-1">
                 {project.description}
               </p>
 
@@ -184,16 +313,34 @@ export default function Projects() {
                 ))}
               </ul>
 
+              {/* Infrastructure Tags */}
+              <div className="space-y-1.5 pt-2">
+                <p className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">DEPLOYMENT INFRASTRUCTURE</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.infra.map((inf) => (
+                    <span 
+                      key={inf}
+                      className="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-950 border border-zinc-800 text-cyan-400/90 font-medium"
+                    >
+                      {inf}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               {/* Tech Badges */}
-              <div className="flex flex-wrap gap-1.5 pt-2">
-                {project.tech.map((t) => (
-                  <span 
-                    key={t}
-                    className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-400"
-                  >
-                    {t}
-                  </span>
-                ))}
+              <div className="space-y-1.5 pt-1">
+                <p className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest">STACK KEYWORDS</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tech.map((t) => (
+                    <span 
+                      key={t}
+                      className="text-[9px] font-mono px-2 py-0.5 rounded bg-zinc-900 border border-zinc-850 text-zinc-400"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 

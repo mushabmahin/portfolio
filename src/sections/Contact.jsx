@@ -69,7 +69,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 border-t border-zinc-900/60 max-w-6xl mx-auto px-4 md:px-6 relative">
       <SectionHeader
-        badge="05 // Communication Hub"
+        badge="05 // Contact"
         title="Get In Touch"
         subtitle="Open to software engineering, machine learning, and artificial intelligence internships or full-time roles."
       />
@@ -91,7 +91,7 @@ export default function Contact() {
                   <Mail className="w-4 h-4" />
                 </span>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Recruiter Hotline</p>
+                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Email Address</p>
                   <p className="text-xs sm:text-sm font-bold text-zinc-200 truncate mt-0.5">{emailAddress}</p>
                 </div>
                 <button
@@ -111,7 +111,7 @@ export default function Contact() {
                   <Phone className="w-4 h-4" />
                 </span>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Voice Vector</p>
+                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Phone Number</p>
                   <p className="text-xs sm:text-sm font-bold text-zinc-200 truncate mt-0.5">+91 {phoneNumber}</p>
                 </div>
                 <button
@@ -132,7 +132,7 @@ export default function Contact() {
                   <MapPin className="w-4 h-4" />
                 </span>
                 <div>
-                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Geographic Base</p>
+                  <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Location</p>
                   <p className="text-xs sm:text-sm font-bold text-zinc-200 mt-0.5">Ernakulam, Kerala, India</p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function Contact() {
 
           {/* Social Profiles Grid */}
           <div className="space-y-4 pt-6 border-t border-zinc-900/60">
-            <h5 className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">External Vectors</h5>
+            <h5 className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Social Profiles</h5>
             <div className="flex items-center gap-4">
               <a
                 href="https://github.com/mushabmahin"
@@ -184,7 +184,7 @@ export default function Contact() {
         <Card hoverable={false} className="lg:col-span-7 flex flex-col justify-between border-zinc-800 bg-zinc-900/20">
           <form onSubmit={handleSubmit} className="space-y-4">
             <h4 className="font-outfit text-sm font-bold text-zinc-100 uppercase tracking-wider font-mono mb-2">
-              Send a Secure Message
+              Send Message
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -244,17 +244,17 @@ export default function Contact() {
                 {status === 'sending' ? (
                   <>
                     <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                    <span>SENDING VECTOR...</span>
+                    <span>Sending Message...</span>
                   </>
                 ) : status === 'success' ? (
                   <>
                     <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>MESSAGE TRANSMITTED SUCCESSFULY</span>
+                    <span>Message Sent Successfully!</span>
                   </>
                 ) : (
                   <>
                     <Send className="w-3.5 h-3.5" />
-                    <span>DISPATCH MESSAGE</span>
+                    <span>Send Message</span>
                   </>
                 )}
               </Button>

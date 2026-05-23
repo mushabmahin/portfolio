@@ -42,6 +42,14 @@ export default function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-hidden">
       
+      {/* Repeating SaaS Grid Background (Faint grid radial-faded, ultra high performance) */}
+      <div 
+        className="absolute inset-0 z-0 opacity-[0.025] pointer-events-none" 
+        style={{ 
+          backgroundImage: `radial-gradient(ellipse at center, transparent 35%, #09090b 95%), url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23ffffff' stroke-width='1'/%3E%3C/svg%3E")` 
+        }} 
+      />
+      
       {/* Background Subtle Tech Ambient Glows (No animation to maximize performance) */}
       <div className="glow-spot bg-indigo-500/10 w-[300px] h-[300px] top-[15%] left-[20%]" />
       <div className="glow-spot bg-cyan-500/10 w-[350px] h-[350px] bottom-[20%] right-[15%]" />
@@ -89,8 +97,31 @@ export default function Hero() {
             <span>Ernakulam, Kerala, India</span>
           </motion.div>
 
+          {/* Minimal Credibility Shelf (Direct & Authentic evidence) */}
+          <motion.div 
+            variants={itemVariants} 
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto pt-5 pb-5 px-6 rounded-xl bg-zinc-900/20 border border-zinc-800/40 backdrop-blur-sm"
+          >
+            <div className="text-center">
+              <p className="font-outfit text-base font-extrabold text-indigo-400">3</p>
+              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mt-0.5">Live Deploys</p>
+            </div>
+            <div className="text-center border-l border-zinc-800/40">
+              <p className="font-outfit text-base font-extrabold text-indigo-400">4</p>
+              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mt-0.5">Active Systems</p>
+            </div>
+            <div className="text-center border-l border-zinc-800/40">
+              <p className="font-outfit text-base font-extrabold text-indigo-400">12</p>
+              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mt-0.5">GitHub Repos</p>
+            </div>
+            <div className="text-center border-l border-zinc-800/40 flex flex-col items-center justify-center">
+              <p className="font-outfit text-[11px] font-bold text-cyan-400 truncate max-w-full">AI Systems</p>
+              <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider mt-0.5">Current Focus</p>
+            </div>
+          </motion.div>
+
           {/* Call to actions */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Button
               variant="primary"
               href="#projects"

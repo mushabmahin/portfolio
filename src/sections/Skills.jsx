@@ -27,13 +27,13 @@ export default function Skills() {
       title: "Databases & APIs",
       icon: Database,
       glow: "emerald",
-      skills: ["PostgreSQL", "REST APIs", "Data Visualization"]
+      skills: ["PostgreSQL", "REST APIs"]
     },
     {
       title: "Tools & Workflows",
       icon: Wrench,
       glow: "none",
-      skills: ["Git", "Tailwind CSS", "Linux CLI", "Hardware Prototyping"]
+      skills: ["Git", "Tailwind CSS"]
     }
   ];
 

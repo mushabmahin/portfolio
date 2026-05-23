@@ -42,10 +42,10 @@ export default function Focus() {
   ];
 
   const currentLearning = [
-    { title: "Data Structures & Algorithms", detail: "Improving complexity analysis and dynamic programming concepts" },
-    { title: "System Design Fundamentals", detail: "Focusing on load balancing, caching, and horizontal scaling patterns" },
-    { title: "Deep Learning Optimization", detail: "Quantization, pruning, and low-latency edge deployment methods" },
-    { title: "Backend Scalability & Docker", detail: "Containerizing services and managing API gateways" }
+    { title: "Data Structures & Algorithms", detail: "Solving array, string, and complexity-focused problems daily" },
+    { title: "System Design Concepts", detail: "Studying client-server architectures, database indexing, and REST constraints" },
+    { title: "AI Inference Exploration", detail: "Benchmarking CPU execution latency and exploring ONNX model formats" },
+    { title: "Backend Basics", detail: "Exploring stateless API structures, connection pools, and container basics" }
   ];
 
   return (
@@ -53,7 +53,7 @@ export default function Focus() {
       <SectionHeader
         badge="01 // Specialty Filtering"
         title="What I Focus On"
-        subtitle="Pragmatic, growth-minded engineering priorities designed to build production-style systems."
+        subtitle="Pragmatic, growth-minded engineering priorities designed to build reliable, functional systems."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -124,6 +124,41 @@ export default function Focus() {
         </div>
 
       </div>
+
+      {/* Currently Building Sub-section */}
+      <div className="mt-16 pt-12 border-t border-zinc-900/60">
+        <h4 className="font-outfit text-xs font-bold tracking-[0.15em] text-indigo-400 uppercase mb-6 flex items-center gap-2 font-mono">
+          <BookOpen className="w-4 h-4" />
+          Currently Building &amp; Growth Priorities
+        </h4>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <Card hoverable={true} glowColor="none" className="!bg-zinc-950/20 border border-zinc-800/40 p-5">
+            <h5 className="font-outfit text-xs font-bold text-zinc-100 mb-2">Daily DSA Practice</h5>
+            <p className="text-[10px] text-zinc-400 leading-relaxed">
+              Solving array, string, and recursion problems daily to optimize execution time and space complexity.
+            </p>
+          </Card>
+          <Card hoverable={true} glowColor="none" className="!bg-zinc-950/20 border border-zinc-800/40 p-5">
+            <h5 className="font-outfit text-xs font-bold text-zinc-100 mb-2">Backend Basics</h5>
+            <p className="text-[10px] text-zinc-400 leading-relaxed">
+              Exploring relational database indexing, connection caching, and building robust REST APIs.
+            </p>
+          </Card>
+          <Card hoverable={true} glowColor="none" className="!bg-zinc-950/20 border border-zinc-800/40 p-5">
+            <h5 className="font-outfit text-xs font-bold text-zinc-100 mb-2">AI Inference Exploration</h5>
+            <p className="text-[10px] text-zinc-400 leading-relaxed">
+              Understanding common neural network model formats, benchmarking latency, and exploring the ONNX Runtime.
+            </p>
+          </Card>
+          <Card hoverable={true} glowColor="none" className="!bg-zinc-950/20 border border-zinc-800/40 p-5">
+            <h5 className="font-outfit text-xs font-bold text-zinc-100 mb-2">System Design Concepts</h5>
+            <p className="text-[10px] text-zinc-400 leading-relaxed">
+              Studying standard HTTP stateless servers, load balancers, database indices, and modular API structures.
+            </p>
+          </Card>
+        </div>
+      </div>
+
     </section>
   );
 }
