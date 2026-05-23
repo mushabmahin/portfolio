@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 
 ## 🌐 Live Demo
 
-[View Live Portfolio](#) <!-- Add your deployed link here -->
+[View Live Portfolio](#) <!-- mushab-mahin.vercel.app -->
 
 ## 👋 About Me
 
@@ -82,39 +82,14 @@ portfolio/
 └── package.json        # Project dependencies
 ```
 
-## 🎯 Featured Projects
-
-Add your notable projects here with descriptions and links.
-
-## 📚 Skills
-
-- Frontend Development (React, JavaScript)
-- Responsive Web Design
-- [Add other relevant skills]
 
 ## 📞 Contact & Links
 
 - **GitHub:** [github.com/mushabmahin](https://github.com/mushabmahin)
-- **LinkedIn:** [Add your LinkedIn URL]
-- **Email:** [Add your email]
-- **Portfolio:** [Add your portfolio URL]
+- **LinkedIn:** [www.linkedin.com/in/mushabmahin]
+- **Email:** [mushabmahin777@gmail.com]
+- **Portfolio:** [mushab-mahin.vercel.app]
 
-## 🔧 Configuration
 
-### ESLint
-
-For production applications, it's recommended to enable TypeScript with type-aware lint rules. See [Vite's TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for more details.
-
-### React Compiler
-
-The React Compiler is not enabled by default due to its impact on build performance. To enable it, refer to the [React Compiler documentation](https://react.dev/learn/react-compiler/installation).
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-**Last Updated:** May 2026
 
 Feel free to fork this repository and customize it for your own portfolio!
