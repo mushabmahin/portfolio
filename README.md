@@ -4,19 +4,22 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 
 ## 🌐 Live Demo
 
-[[mushab-mahin.vercel.app](https://mushab-mahin.vercel.app/)](#) <!-- mushab-mahin.vercel.app -->
+🔗 https://mushab-mahin.vercel.app
 
-## 👋 About Me
+---
 
-I'm a passionate developer with expertise in building modern web applications. This portfolio showcases my best work and technical capabilities.
+## 👨‍💻 About
 
-## ✨ Features
+Third-year BTech student in Artificial Intelligence and Data Science focused on building production-style AI systems, computer vision applications, and scalable full-stack software.
 
-- ⚡ **Fast & Performant** - Built with Vite for lightning-fast development and optimized production builds
-- 📱 **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-- 🎨 **Modern UI** - Clean and professional design with smooth interactions
-- 🚀 **React + ESLint** - Best practices with modern React patterns and linting
+Interested in:
+- Machine Learning Engineering
+- Real-Time AI Systems
+- Computer Vision
+- Backend Architecture
+- Full Stack Development
 
+This portfolio showcases engineering-focused projects involving ML pipelines, anomaly detection, embedded systems, voice interfaces, and deployment workflows.
 ## 🛠️ Tech Stack
 
 - **Frontend Framework:** React 19
