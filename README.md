@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with React and Vite, showcasing my 
 
 ## 🌐 Live Demo
 
-[mushab-mahin.vercel.app](#) <!-- mushab-mahin.vercel.app -->
+[[mushab-mahin.vercel.app](https://mushab-mahin.vercel.app/)](#) <!-- mushab-mahin.vercel.app -->
 
 ## 👋 About Me
 
