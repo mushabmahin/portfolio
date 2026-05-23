@@ -182,84 +182,61 @@ export default function Contact() {
 
         {/* Right Column: Contact Form (7 cols) */}
         <Card hoverable={false} className="lg:col-span-7 flex flex-col justify-between border-zinc-800 bg-zinc-900/20">
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <h4 className="font-outfit text-sm font-bold text-zinc-100 uppercase tracking-wider font-mono mb-2">
-              Send Message
-            </h4>
+          <form
+  action="https://formspree.io/f/xgoqzwgz"
+  method="POST"
+  className="space-y-6"
+>
+  {/* Name */}
+  <div>
+    <label className="block text-sm text-zinc-400 mb-2">
+      Name
+    </label>
+    <input
+      type="text"
+      name="name"
+      required
+      placeholder="Your Name"
+      className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    />
+  </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="space-y-1.5">
-                <label htmlFor="name" className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">Your Name</label>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="e.g. Sarah Jenkins"
-                  value={formState.name}
-                  onChange={handleInputChange}
-                  disabled={status === 'sending' || status === 'success'}
-                  className="w-full bg-zinc-950 border border-zinc-800/80 rounded-lg px-3.5 py-2.5 text-xs text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/20 disabled:opacity-50 transition-all"
-                />
-              </div>
-              
-              <div className="space-y-1.5">
-                <label htmlFor="email" className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">Your Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="e.g. sarah.jenkins@company.com"
-                  value={formState.email}
-                  onChange={handleInputChange}
-                  disabled={status === 'sending' || status === 'success'}
-                  className="w-full bg-zinc-950 border border-zinc-800/80 rounded-lg px-3.5 py-2.5 text-xs text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/20 disabled:opacity-50 transition-all"
-                />
-              </div>
-            </div>
+  {/* Email */}
+  <div>
+    <label className="block text-sm text-zinc-400 mb-2">
+      Email
+    </label>
+    <input
+      type="email"
+      name="email"
+      required
+      placeholder="you@example.com"
+      className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    />
+  </div>
 
-            <div className="space-y-1.5">
-              <label htmlFor="message" className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="4"
-                placeholder="Briefly state project requirements or internship details..."
-                value={formState.message}
-                onChange={handleInputChange}
-                disabled={status === 'sending' || status === 'success'}
-                className="w-full bg-zinc-950 border border-zinc-800/80 rounded-lg px-3.5 py-2.5 text-xs text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/20 disabled:opacity-50 transition-all resize-none"
-              />
-            </div>
+  {/* Message */}
+  <div>
+    <label className="block text-sm text-zinc-400 mb-2">
+      Message
+    </label>
+    <textarea
+      name="message"
+      required
+      rows="6"
+      placeholder="Write your message..."
+      className="w-full rounded-xl border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+    />
+  </div>
 
-            <div className="pt-2">
-              <Button
-                type="submit"
-                variant="primary"
-                disabled={status === 'sending' || status === 'success' || !formState.name || !formState.email || !formState.message}
-                className="w-full sm:w-auto font-semibold flex items-center justify-center gap-2 !py-2.5"
-              >
-                {status === 'sending' ? (
-                  <>
-                    <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
-                    <span>Sending Message...</span>
-                  </>
-                ) : status === 'success' ? (
-                  <>
-                    <Check className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Message Sent Successfully!</span>
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-3.5 h-3.5" />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </Button>
-            </div>
-          </form>
+  {/* Submit Button */}
+  <button
+    type="submit"
+    className="w-full rounded-xl bg-indigo-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-indigo-400"
+  >
+    Send Message
+  </button>
+</form>
         </Card>
 
       </div>
