@@ -91,7 +91,7 @@ export default function Navbar() {
           <Button
             variant="secondary"
             className="!py-1.5 !px-3.5 !text-xs font-mono"
-            href="https://github.com/mushabmahin/portfolio/raw/main/resume.pdf" // Placeholder pointing to printable version or resume resource
+            href="/resume.pdf"" // Placeholder pointing to printable version or resume resource
             icon={FileText}
           >
             RESUME
@@ -145,7 +145,7 @@ export default function Navbar() {
             <Button
               variant="secondary"
               className="!py-1.5 !px-3 !text-xs font-mono"
-              href="https://github.com/mushabmahin/portfolio/raw/main/resume.pdf"
+              href="/resume.pdf"
               icon={FileText}
             >
               RESUME
