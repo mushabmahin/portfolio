@@ -89,9 +89,9 @@ portfolio/
 ## 📞 Contact & Links
 
 - **GitHub:** [github.com/mushabmahin](https://github.com/mushabmahin)
-- **LinkedIn:** [www.linkedin.com/in/mushabmahin]
-- **Email:** [mushabmahin777@gmail.com]
-- **Portfolio:** [mushab-mahin.vercel.app]
+- **LinkedIn:** www.linkedin.com/in/mushabmahin
+- **Email:** mushabmahin777@gmail.com
+- **Portfolio:** mushab-mahin.vercel.app
 
 
 
