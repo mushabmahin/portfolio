@@ -91,7 +91,7 @@ portfolio/
 - **GitHub:** [github.com/mushabmahin](https://github.com/mushabmahin)
 - **LinkedIn:** www.linkedin.com/in/mushabmahin
 - **Email:** mushabmahin777@gmail.com
-- **Portfolio:** mushab-mahin.vercel.app
+- **Portfolio:** [mushab-mahin.vercel.app](https://mushab-mahin.vercel.app)
 
 
 
